@@ -89,3 +89,23 @@ difference2.addEventListener("input", () => {
 });
 
 // Aspect Ratio Event Listener
+
+originalWidth.addEventListener("input", () => {
+  const aspectOutput = calculateAspectRatio(
+    +originalHeight.value,
+    +originalWidth.value,
+    +newWidth.value,
+    "h"
+  );
+  newHeight.value = aspectOutput;
+});
+
+originalHeight.addEventListener("input", () => {
+  const aspectOutput = calculateAspectRatio(
+    +originalHeight.value,
+    +originalWidth.value,
+    +newWidth.value,
+    "h"
+  );
+  newHeight.value = aspectOutput;
+});
